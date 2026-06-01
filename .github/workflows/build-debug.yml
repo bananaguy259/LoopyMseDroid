@@ -49,8 +49,7 @@ jobs:
         git clone --depth=1 --branch release-2.30.x \
           https://github.com/libsdl-org/SDL.git \
           app/src/main/jni/SDL2
-        echo "SDL2 cloned:"
-        ls app/src/main/jni/SDL2/
+        echo "SDL2 cloned"
 
     - name: Clone LoopyMSE upstream
       run: |
@@ -61,11 +60,15 @@ jobs:
         SRC=/tmp/LoopyMSE/src
         DST=app/src/main/jni/LoopyMSE
 
-        mkdir -p $DST/common $DST/core $DST/video $DST/sound \
-                 $DST/expansion $DST/printer $DST/log
+        # Create only what isn't already in the repo
         mkdir -p app/src/main/assets
         mkdir -p app/src/main/jni/stb
 
+        # Do NOT pre-create DST subdirs — let cp create them.
+        # If the destination dir already exists, cp -r copies the
+        # source dir INTO it (adding an extra nesting level), which
+        # would put files at LoopyMSE/common/common/bswp.cpp instead
+        # of LoopyMSE/common/bswp.cpp and break CMake.
         cp -r $SRC/common     $DST/common
         cp -r $SRC/core       $DST/core
         cp -r $SRC/video      $DST/video
@@ -95,7 +98,6 @@ jobs:
 
     - name: Download stb_image_write.h
       run: |
-        mkdir -p app/src/main/jni/stb
         curl -fSL \
           https://raw.githubusercontent.com/nothings/stb/master/stb_image_write.h \
           -o app/src/main/jni/stb/stb_image_write.h
@@ -123,4 +125,3 @@ jobs:
         SIZE=$(du -sh $APK | cut -f1)
         echo "✅ Build successful!"
         echo "APK size: $SIZE"
-        echo "Download from: Actions tab → this run → Artifacts"
