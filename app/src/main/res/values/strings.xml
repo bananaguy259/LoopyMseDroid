@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Loopy-MseDroid</string>
+    <string name="app_version">v1.0.0</string>
+
+    <!-- Main screen -->
+    <string name="search_hint">Search ROMs…</string>
+    <string name="no_roms_title">No ROMs yet</string>
+    <string name="no_roms_body">Tap the + button to add a Loopy ROM file.\nYou\'ll also need a BIOS file to play.</string>
+    <string name="add_rom">Add ROM</string>
+    <string name="last_played">Last played %s</string>
+    <string name="never_played">Never played</string>
+    <string name="file_size">%s</string>
+
+    <!-- ROM context menu -->
+    <string name="play">Play</string>
+    <string name="remove_from_list">Remove from list</string>
+    <string name="rom_info">ROM info</string>
+
+    <!-- BIOS setup -->
+    <string name="bios_setup_title">BIOS Setup</string>
+    <string name="bios_setup_body">Loopy-MseDroid needs two BIOS files to run games. These are ROM dumps from the original Casio Loopy hardware and must be sourced legally.\n\nFiles needed:\n• bios.bin — Main BIOS (~512 KB)\n• soundbios.bin — Sound BIOS (~128 KB)</string>
+    <string name="select_main_bios">Select bios.bin…</string>
+    <string name="select_sound_bios">Select soundbios.bin…</string>
+    <string name="bios_selected">✓ Selected</string>
+    <string name="bios_not_selected">Not selected</string>
+    <string name="bios_optional_note">Sound BIOS is optional — emulation continues without it, but there will be no audio.</string>
+    <string name="bios_continue">Continue</string>
+    <string name="bios_missing_warning">Main BIOS is required to play games.</string>
+
+    <!-- Emulator screen -->
+    <string name="screenshot_saved">Screenshot saved to Pictures/Loopy-MseDroid</string>
+    <string name="print_saved">Loopy printed! Saved to Pictures/Loopy-MseDroid/Printer</string>
+    <string name="view">View</string>
+
+    <!-- Pause menu -->
+    <string name="paused">Paused</string>
+    <string name="resume">Resume</string>
+    <string name="reset_console">Reset Console</string>
+    <string name="take_screenshot">Take Screenshot</string>
+    <string name="load_rom">Load ROM</string>
+    <string name="settings">Settings</string>
+    <string name="quit_game">Quit to Library</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_display">Display</string>
+    <string name="settings_aspect_ratio">Correct Aspect Ratio (4:3)</string>
+    <string name="settings_aspect_ratio_summary">Scale display to proper 4:3 proportions</string>
+    <string name="settings_crop_overscan">Crop Overscan</string>
+    <string name="settings_crop_overscan_summary">Hide the overscan border for a cleaner image</string>
+    <string name="settings_antialias">Antialiasing</string>
+    <string name="settings_antialias_summary">Smooth pixel edges using high-quality scaling</string>
+    <string name="settings_audio">Audio</string>
+    <string name="settings_bg_audio">Run in Background</string>
+    <string name="settings_bg_audio_summary">Keep audio playing when app is minimized</string>
+    <string name="settings_controls">Controls</string>
+    <string name="settings_gamepad_opacity">Virtual Gamepad Opacity</string>
+    <string name="settings_gamepad_show">Show Virtual Gamepad</string>
+    <string name="settings_gamepad_show_summary">Auto-hidden when physical controller connected</string>
+    <string name="settings_haptics">Button Haptics</string>
+    <string name="settings_haptics_summary">Vibrate on virtual button press</string>
+    <string name="settings_files">Files</string>
+    <string name="settings_bios">BIOS Files</string>
+    <string name="settings_bios_summary">Change BIOS file locations</string>
+    <string name="settings_screenshot_format">Screenshot Format</string>
+    <string name="settings_printer_format">Printer Output Format</string>
+    <string name="settings_about">About</string>
+    <string name="settings_version">Version</string>
+    <string name="settings_credits">Credits</string>
+    <string name="settings_credits_summary">PSI, kasami, partlyhuman — and the UBCH discord</string>
+    <string name="settings_source">Source Code</string>
+    <string name="settings_source_summary">github.com/LoopyMSE/LoopyMSE</string>
+    <string name="settings_licenses">Open Source Licenses</string>
+
+    <!-- Image formats (used in ListPreference) -->
+    <string-array name="image_format_entries">
+        <item>PNG</item>
+        <item>JPG</item>
+        <item>BMP</item>
+    </string-array>
+    <string-array name="image_format_values">
+        <item>png</item>
+        <item>jpg</item>
+        <item>bmp</item>
+    </string-array>
+
+    <!-- Errors -->
+    <string name="error_load_rom">Failed to load ROM file.</string>
+    <string name="error_bios_required">BIOS file is required. Set it up in Settings.</string>
+</resources>

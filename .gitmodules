@@ -1,0 +1,4 @@
+[submodule "app/src/main/jni/SDL2"]
+	path = app/src/main/jni/SDL2
+	url = https://github.com/libsdl-org/SDL.git
+	branch = release-2.30.x

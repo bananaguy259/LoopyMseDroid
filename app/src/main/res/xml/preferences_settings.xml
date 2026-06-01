@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         DISPLAY
+    ════════════════════════════════════════════════════════════════════ -->
+    <PreferenceCategory
+        android:title="@string/settings_display"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            android:key="correct_aspect_ratio"
+            android:title="@string/settings_aspect_ratio"
+            android:summary="@string/settings_aspect_ratio_summary"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="crop_overscan"
+            android:title="@string/settings_crop_overscan"
+            android:summary="@string/settings_crop_overscan_summary"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="antialias"
+            android:title="@string/settings_antialias"
+            android:summary="@string/settings_antialias_summary"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         AUDIO
+    ════════════════════════════════════════════════════════════════════ -->
+    <PreferenceCategory
+        android:title="@string/settings_audio"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            android:key="run_in_background"
+            android:title="@string/settings_bg_audio"
+            android:summary="@string/settings_bg_audio_summary"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         CONTROLS
+    ════════════════════════════════════════════════════════════════════ -->
+    <PreferenceCategory
+        android:title="@string/settings_controls"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            android:key="show_gamepad"
+            android:title="@string/settings_gamepad_show"
+            android:summary="@string/settings_gamepad_show_summary"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+        <SeekBarPreference
+            android:key="gamepad_opacity"
+            android:title="@string/settings_gamepad_opacity"
+            android:defaultValue="70"
+            android:max="100"
+            app:min="20"
+            app:showSeekBarValue="true"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="haptics"
+            android:title="@string/settings_haptics"
+            android:summary="@string/settings_haptics_summary"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FILES
+    ════════════════════════════════════════════════════════════════════ -->
+    <PreferenceCategory
+        android:title="@string/settings_files"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="bios_setup"
+            android:title="@string/settings_bios"
+            android:summary="@string/settings_bios_summary"
+            app:iconSpaceReserved="false" />
+
+        <ListPreference
+            android:key="screenshot_format"
+            android:title="@string/settings_screenshot_format"
+            android:entries="@array/image_format_entries"
+            android:entryValues="@array/image_format_values"
+            android:defaultValue="png"
+            app:iconSpaceReserved="false" />
+
+        <ListPreference
+            android:key="printer_format"
+            android:title="@string/settings_printer_format"
+            android:entries="@array/image_format_entries"
+            android:entryValues="@array/image_format_values"
+            android:defaultValue="png"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         ABOUT
+    ════════════════════════════════════════════════════════════════════ -->
+    <PreferenceCategory
+        android:title="@string/settings_about"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="version"
+            android:title="@string/settings_version"
+            android:summary="@string/app_version"
+            android:selectable="false"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="credits"
+            android:title="@string/settings_credits"
+            android:summary="@string/settings_credits_summary"
+            android:selectable="false"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="source_code"
+            android:title="@string/settings_source"
+            android:summary="@string/settings_source_summary"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="licenses"
+            android:title="@string/settings_licenses"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

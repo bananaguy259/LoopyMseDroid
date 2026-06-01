@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Base app theme: Material3 with full dark override.
+        All surfaces mapped to our monochrome palette.
+    -->
+    <style name="Theme.LoopyMseDroid" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Core colors -->
+        <item name="android:colorBackground">@color/bg_primary</item>
+        <item name="colorSurface">@color/bg_surface</item>
+        <item name="colorSurfaceVariant">@color/bg_elevated</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
+        <!-- Primary = white (no hue accent) -->
+        <item name="colorPrimary">@color/text_primary</item>
+        <item name="colorOnPrimary">@color/bg_primary</item>
+        <item name="colorPrimaryContainer">@color/bg_elevated</item>
+        <item name="colorOnPrimaryContainer">@color/text_primary</item>
+
+        <!-- Secondary -->
+        <item name="colorSecondary">@color/text_secondary</item>
+        <item name="colorOnSecondary">@color/bg_primary</item>
+
+        <!-- Outline -->
+        <item name="colorOutline">@color/border</item>
+        <item name="colorOutlineVariant">@color/border</item>
+
+        <!-- Status bar: black, light icons -->
+        <item name="android:statusBarColor">@color/statusbar</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/bg_primary</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Text appearance -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+
+        <!-- Ripple -->
+        <item name="android:colorControlHighlight">@color/ripple</item>
+        <item name="rippleColor">@color/ripple</item>
+    </style>
+
+    <!--
+        Emulator screen theme: truly fullscreen, no bars, no UI chrome.
+        The game IS the entire screen.
+    -->
+    <style name="Theme.LoopyMseDroid.Emulator" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackground">@android:color/black</item>
+    </style>
+
+    <!--
+        Toolbar style: transparent, no elevation, matches bg
+    -->
+    <style name="Widget.LoopyMseDroid.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/bg_primary</item>
+        <item name="android:elevation">0dp</item>
+        <item name="titleTextColor">@color/text_primary</item>
+    </style>
+
+    <!--
+        Search bar style
+    -->
+    <style name="Widget.LoopyMseDroid.SearchBar" parent="Widget.Material3.Search.Bar">
+        <item name="android:background">@color/bg_input</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+    </style>
+
+    <!--
+        List item style
+    -->
+    <style name="Widget.LoopyMseDroid.RomItem">
+        <item name="android:background">@drawable/bg_rom_item</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+</resources>

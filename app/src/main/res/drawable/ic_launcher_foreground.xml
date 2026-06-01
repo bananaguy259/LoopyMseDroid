@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Adaptive icon foreground layer.
+    Simple cartridge silhouette — clean and recognizable at small sizes.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Cartridge body -->
+    <path
+        android:fillColor="#F0F0F0"
+        android:pathData="
+            M30,24
+            L78,24
+            L78,72
+            L64,86
+            L30,86
+            Z" />
+
+    <!-- Cutout: label window -->
+    <path
+        android:fillColor="#1C1C1C"
+        android:pathData="M38,34 L70,34 L70,58 L38,58 Z" />
+
+    <!-- Connector notch bottom -->
+    <path
+        android:fillColor="#1C1C1C"
+        android:pathData="M36,86 L36,94 L40,94 L40,86 Z" />
+    <path
+        android:fillColor="#1C1C1C"
+        android:pathData="M50,86 L50,94 L54,94 L54,86 Z" />
+    <path
+        android:fillColor="#1C1C1C"
+        android:pathData="M64,86 L64,94 L68,94 L68,86 Z" />
+
+    <!-- Corner chamfer fill (diagonal cut top-right) -->
+    <path
+        android:fillColor="#1C1C1C"
+        android:pathData="M64,72 L78,72 L64,86 Z" />
+    <path
+        android:fillColor="#CCCCCC"
+        android:pathData="M64,72 L78,72 L78,74 L66,86 L64,86 Z" />
+
+</vector>

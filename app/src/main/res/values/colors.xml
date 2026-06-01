@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- === Loopy-MseDroid Monochrome Dark Palette === -->
+    <!-- Inspired by Eden's pure dark UI — no accent colors, just refined grays and white -->
+
+    <!-- Backgrounds -->
+    <color name="bg_primary">#0D0D0D</color>       <!-- Near-black app background -->
+    <color name="bg_surface">#141414</color>         <!-- Cards, list items -->
+    <color name="bg_elevated">#1C1C1C</color>        <!-- Dialogs, bottom sheets -->
+    <color name="bg_input">#191919</color>           <!-- Search bar, text fields -->
+
+    <!-- Borders / Dividers -->
+    <color name="border">#242424</color>             <!-- Subtle list separators -->
+    <color name="border_strong">#303030</color>      <!-- Selected item outlines -->
+
+    <!-- Text -->
+    <color name="text_primary">#F0F0F0</color>       <!-- Main labels, game titles -->
+    <color name="text_secondary">#888888</color>     <!-- Subtitles, metadata -->
+    <color name="text_tertiary">#484848</color>      <!-- Placeholder, disabled -->
+    <color name="text_hint">#555555</color>          <!-- Search placeholder -->
+
+    <!-- Icons -->
+    <color name="icon_primary">#CCCCCC</color>       <!-- Toolbar icons -->
+    <color name="icon_secondary">#666666</color>     <!-- List row secondary icons -->
+
+    <!-- Interactive states -->
+    <color name="ripple">#33FFFFFF</color>            <!-- Touch ripple on dark surfaces -->
+    <color name="pressed">#1AFFFFFF</color>          <!-- Pressed state background -->
+
+    <!-- System (status bar etc.) -->
+    <color name="statusbar">#000000</color>
+
+    <!-- Virtual gamepad -->
+    <color name="gamepad_button">#33FFFFFF</color>   <!-- Semi-transparent white buttons -->
+    <color name="gamepad_button_pressed">#66FFFFFF</color>
+    <color name="gamepad_outline">#55FFFFFF</color>
+
+    <!-- Semantic (used for BIOS warning banner) -->
+    <color name="warning_bg">#1A1A00</color>
+    <color name="warning_text">#CCCC44</color>
+</resources>

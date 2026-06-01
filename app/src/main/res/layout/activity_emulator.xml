@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Emulator screen.
+    The SDL2 surface fills the entire screen.
+    VirtualGamepadView is a transparent overlay drawn on top.
+    PauseMenu is a dark overlay shown when back is pressed.
+    All elements are full-screen, stacked using FrameLayout.
+-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!--
+        SDL2 renders directly into a SurfaceView managed by SDLActivity.
+        We don't declare it here — SDL creates it programmatically.
+        This FrameLayout is the root that SDL uses as its parent.
+    -->
+
+    <!-- Virtual gamepad: transparent overlay on top of the game -->
+    <com.loopymse.droid.emulator.VirtualGamepadView
+        android:id="@+id/virtual_gamepad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no" />
+
+    <!-- Pause menu: full-screen dark overlay, hidden by default -->
+    <FrameLayout
+        android:id="@+id/pause_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- Screenshot flash: full white overlay, animates on screenshot -->
+    <View
+        android:id="@+id/screenshot_flash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFFFF"
+        android:alpha="0"
+        android:visibility="gone" />
+
+</FrameLayout>

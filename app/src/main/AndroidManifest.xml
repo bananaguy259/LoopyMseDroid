@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Storage: needed to read ROMs from user-chosen locations -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <!-- Needed to write screenshots/printer output to the Pictures gallery -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+
+    <!-- Vibration for virtual gamepad haptics -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Controllers: declare that we can use gamepads but don't require them -->
+    <uses-feature android:name="android.hardware.gamepad" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="true" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.LoopyMseDroid"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true">
+
+        <!--
+            MainActivity: ROM library list screen.
+            singleTask: prevent stacking multiple library screens.
+        -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|navigation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            EmulatorActivity: the actual game screen.
+            Extends SDLActivity from SDL2.
+            immersive sticky + landscape + keep screen on.
+        -->
+        <activity
+            android:name=".emulator.EmulatorActivity"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboardHidden|keyboard|navigation"
+            android:keepScreenOn="true"
+            android:theme="@style/Theme.LoopyMseDroid.Emulator" />
+
+        <!--
+            BiosSetupActivity: first-run wizard for selecting BIOS files.
+        -->
+        <activity
+            android:name=".ui.BiosSetupActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+        <!--
+            SettingsActivity: app settings screen.
+        -->
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Individual ROM list item.
+    Layout: [Cartridge icon] [Title + metadata] [Play button]
+    Clean, minimal — matches Eden's list density.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="72dp"
+    android:background="@drawable/bg_rom_item"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingStart="20dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp">
+
+    <!-- Cartridge icon: small, dimmed -->
+    <ImageView
+        android:id="@+id/iv_rom_icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_cartridge"
+        android:tint="@color/icon_secondary"
+        android:contentDescription=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Game title: primary text, bold -->
+    <TextView
+        android:id="@+id/tv_rom_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:fontFamily="sans-serif-medium"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toEndOf="@id/iv_rom_icon"
+        app:layout_constraintEnd_toStartOf="@id/btn_play"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_rom_meta"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Wanwan Aijou Monogatari" />
+
+    <!-- Metadata: filename · size · last played -->
+    <TextView
+        android:id="@+id/tv_rom_meta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.02"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toEndOf="@id/iv_rom_icon"
+        app:layout_constraintEnd_toStartOf="@id/btn_play"
+        app:layout_constraintTop_toBottomOf="@id/tv_rom_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="wanwan.bin · 2.0 MB · Last played 2 days ago" />
+
+    <!-- Play button: right-side, subtle -->
+    <ImageButton
+        android:id="@+id/btn_play"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_play"
+        android:tint="@color/icon_primary"
+        android:background="@drawable/bg_icon_button"
+        android:contentDescription="@string/play"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Divider line at bottom of each row -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/border"
+        android:layout_marginStart="44dp"
+        app:layout_constraintStart_toEndOf="@id/iv_rom_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
