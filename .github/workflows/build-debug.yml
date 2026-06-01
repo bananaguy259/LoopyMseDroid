@@ -62,6 +62,12 @@ jobs:
         SRC=/tmp/LoopyMSE/src
         DST=app/src/main/jni/LoopyMSE
 
+        # Create directories first — git doesn't track empty folders
+        mkdir -p $DST/common $DST/core $DST/video $DST/sound \
+                 $DST/expansion $DST/printer $DST/log
+        mkdir -p app/src/main/assets
+        mkdir -p app/src/main/jni/stb
+
         cp -r $SRC/common     $DST/common
         cp -r $SRC/core       $DST/core
         cp -r $SRC/video      $DST/video
